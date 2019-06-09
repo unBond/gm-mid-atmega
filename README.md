@@ -15,7 +15,7 @@ Gm Vectra flex with oem mid (brazil)
 
 Another cars, maybe need some adaptations, or new calcs on fuel consumption factor/adjust vss
 
-#Video Demo:
+# Video Demo:
 
 [![Watch the video](http://i3.ytimg.com/vi/AK_T6fzSQlk/hqdefault.jpg)](https://youtu.be/AK_T6fzSQlk)
 
@@ -23,6 +23,7 @@ Another cars, maybe need some adaptations, or new calcs on fuel consumption fact
 ## pcb / boom / lista de peças
 https://easyeda.com/unBond/mid-atmega-1284p-3
 ![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/pcb_beta.jpg)
+
 Quase todos componentes você vai encontrar no esquemático no easy eda, fora isso você vai precisar 
 de um
 
