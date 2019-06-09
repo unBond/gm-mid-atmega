@@ -16,7 +16,8 @@ Elite 2.0/2.4
 Another cars, maybe need some adaptations, or new calcs on fuel consumption factor/adjust vss
 
 Video Demo:
-https://youtu.be/AK_T6fzSQlk
+[![Watch the video](https://img.youtube.com/vi/AK_T6fzSQlk/hqdefault.jpg)](https://youtu.be/AK_T6fzSQlk)
+
 
 ## pcb / boom / lista de peças
 https://easyeda.com/unBond/mid-atmega-1284p-3
