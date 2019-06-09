@@ -1,7 +1,7 @@
 # gm-mid-atmega
 Alternative to gm/chevrolet/ multi display information - MID based on atmega 1284p / arduino compiler o using standalone pcb
 
-##pcb / boom
+## pcb / boom / lista de peças
 https://easyeda.com/unBond/mid-atmega-1284p-3
 ![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/pcb_beta.jpg)
 
