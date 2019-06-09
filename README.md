@@ -3,15 +3,15 @@ Alternative to gm/chevrolet/ multi display information - MID based on atmega 128
 Compatible cars:
 
 Gm astra with oem mid (brazil)
-elite
-SS
-CD
-GSI
+* elite
+* SS
+* CD
+* GSI
 
 Gm Vectra flex with oem mid (brazil)
-GTX
-Elegance
-Elite 2.0/2.4
+* GTX
+* Elegance
+* Elite 2.0/2.4
 
 Another cars, maybe need some adaptations, or new calcs on fuel consumption factor/adjust vss
 
@@ -25,10 +25,10 @@ https://easyeda.com/unBond/mid-atmega-1284p-3
 Quase todos componentes você vai encontrar no esquemático no easy eda, fora isso você vai precisar 
 de um
 
-1 - ATMEGA 1284p
-2 - Stepdown 12 pra 5v, pois um 7805 não suporta alimentar o LCD. Vou deixar um exemplo
+* 1 - ATMEGA 1284p
+* 2 - Stepdown 12 pra 5v, pois um 7805 não suporta alimentar o LCD. Vou deixar um exemplo
 ![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/dd4012-65-40v-p-5v-step-down-dcdc-substituto-7805-D_NQ_NP_904249-MLB27779427662_072018-F.jpg)
-3 - Um gravador USBTiny USBtinyISP AVR ISP Programador Bootloader Para Arduino ou usar um arduino UNO mesmo pra gravar a firmware
+* 3 - Um gravador USBTiny USBtinyISP AVR ISP Programador Bootloader Para Arduino ou usar um arduino UNO mesmo pra gravar a firmware
 
 ## Principais créditos:
 
