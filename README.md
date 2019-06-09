@@ -1,5 +1,22 @@
 # gm-mid-atmega
-Alternative to gm/chevrolet/ multi display information - MID based on atmega 1284p / arduino compiler o using standalone pcb
+Alternative to gm/chevrolet/ multi display information - MID based on atmega 1284p / arduino editor/compiler o using standalone pcb
+Compatible cars:
+
+Gm astra with oem mid (brazil)
+elite
+SS
+CD
+GSI
+
+Gm Vectra flex with oem mid (brazil)
+GTX
+Elegance
+Elite 2.0/2.4
+
+Another cars, maybe need some adaptations, or new calcs on fuel consumption factor/adjust vss
+
+Video Demo:
+https://youtu.be/AK_T6fzSQlk
 
 ## pcb / boom / lista de peças
 https://easyeda.com/unBond/mid-atmega-1284p-3
@@ -34,8 +51,6 @@ O restante é de minha autoria
 Não me responsabilizo por qualquer dano ou prejuízo que este venha causar.
 Use por sua conta e risco. Sempre consulte um engenheiro/projetista profissional.
 
-#
-
 ## Main credits:
 
 * Author: grzeeezzz
@@ -64,4 +79,6 @@ The rest is my own
 I will not be liable for any damage or injury that this may cause.
 Use at your own risk. Always consult a professional engineer / designer.
 
-Demo:
+Video Demo:
+https://youtu.be/AK_T6fzSQlk
+
