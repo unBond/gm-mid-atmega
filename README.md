@@ -25,13 +25,14 @@ https://easyeda.com/unBond/mid-atmega-1284p-3
 ![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/pcb_beta.jpg)
 
 Quase todos componentes você vai encontrar no esquemático no easy eda, fora isso você vai precisar 
-de um
+desses ítens:
 
 * 1 - ATMEGA 1284p
 * 2 - Stepdown 12 pra 5v, pois um 7805 não suporta alimentar o LCD. Vou deixar um exemplo
 ![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/dd4012-65-40v-p-5v-step-down-dcdc-substituto-7805-D_NQ_NP_904249-MLB27779427662_072018-F.jpg)
 * 3 - Um gravador USBTiny USBtinyISP AVR ISP Programador Bootloader Para Arduino ou usar um arduino UNO mesmo pra gravar a firmware
 * 4 - Um display, no projeto foi usado o Nextion  NX4024T032_011R	3.2, porém como a saída dos dados é via serial ou i2c as possibilidades são infinitas! (outras telas, bluetooth e etc)
+
 ## Principais créditos:
 
 * Autor: grzeeezzz
