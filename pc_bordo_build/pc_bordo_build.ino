@@ -1,5 +1,5 @@
 //Projeto computador de bordo alternativo ao MID gm  - unBond
-//09/06/2019 12:33 - beta placa com fonte nova
+//27/10/2019 14:18 - ajustes nas inicializacao das variaveis pos falhas. 
 //Incluir URL antes de compilar no arduino IDE
 //https://mcudude.github.io/MightyCore/package_MCUdude_MightyCore_index.json
 
@@ -147,7 +147,7 @@ volatile unsigned int speed_temp, speed, avg_speed, max_speed = 0, save_counter,
 //------------------------------------------------------------------------------------
 // Falha Oleo - 13
 //------------------------------------------------------------------------------------
-volatile boolean lvl_oil, lvl_oil_sen = 0;
+volatile boolean lvl_oil = 0, lvl_oil_sen = 0;
 
 //------------------------------------------------------------------------------------
 // Pedal de Freio - 15
@@ -157,12 +157,12 @@ volatile boolean brake_light_test = 1;
 //------------------------------------------------------------------------------------
 // Falha Fusivel Freio - 16
 //------------------------------------------------------------------------------------
-volatile boolean brake_fuse;
+volatile boolean brake_fuse = 0;
 
 //------------------------------------------------------------------------------------
 // Falha Farol/Lanterna Freio - 17
 //------------------------------------------------------------------------------------
-volatile boolean lant_p1, lant_p1_sen = 1;
+volatile boolean lant_p1 = 0, lant_p1_sen = 1;
 
 //------------------------------------------------------------------------------------
 // Falha Luz de Freio - 18
@@ -174,21 +174,21 @@ volatile uint8_t freio_p1_rate = 102; //valor de ajuste da detecção de falha l
 //------------------------------------------------------------------------------------
 // Falha Pastilha freios - 19
 //------------------------------------------------------------------------------------
-volatile boolean brake_pad, brake_pad_sen = 0;
+volatile boolean brake_pad = 0, brake_pad_sen = 0;
 
 //------------------------------------------------------------------------------------
 // Nivel do Arrefecimen - 20
 //------------------------------------------------------------------------------------
-volatile boolean lvl_coolnt, lvl_coolnt_sen = 1;
+volatile boolean lvl_coolnt = 0, lvl_coolnt_sen = 1;
 
 //------------------------------------------------------------------------------------
 // Falha Cambio AT - 21
 //------------------------------------------------------------------------------------
-volatile boolean trans_status, trans_status_sen = 0;
+volatile boolean trans_status = 0, trans_status_sen = 0;
 //------------------------------------------------------------------------------------
 // Falha Lavador - 22
 //------------------------------------------------------------------------------------
-volatile boolean lvl_wash, lvl_wash_sen = 1;
+volatile boolean lvl_wash = 0, lvl_wash_sen = 1;
 
 //------------------------------------------------------------------------------------
 // Botoes alavanca - 23 - 24
@@ -304,9 +304,9 @@ void setup() {
 //------------------------------------------------------------------------------------
 
 //Interrupcoes, rpm, distancia, consumo
-    attachInterrupt(digitalPinToInterrupt(2), rpm_count, RISING);
-    attachInterrupt(digitalPinToInterrupt(10), distance_count, FALLING);
-    attachInterrupt(digitalPinToInterrupt(11), rising, RISING);
+    attachInterrupt(digitalPinToInterrupt(2), rpm_count, RISING);				//INT2
+    attachInterrupt(digitalPinToInterrupt(10), distance_count, FALLING); 		//INT0
+    attachInterrupt(digitalPinToInterrupt(11), rising, RISING);					//INT1
     interrupts();  //Todas configurações concluídas, início das interrupções.
 
 //--- RTC
@@ -465,6 +465,7 @@ ISR(TIMER1_OVF_vect) {
 
     	01/07/2018 Usando 30*250ms - 7 segundos - virada rapida de chave.
 		19/12/2018 Usando 30*250ms - 30 segundos - virada rapida de chave.
+		27/10/2019 120 * 0.250ms = 30 segundos aciona sleep
     */
     if (save_counter > 120 && speed == 0) {
         sleepSetup();
@@ -572,7 +573,10 @@ void sleepSetup() {
     //Serial.println("dormi");
     //Serial.flush();
     //reset leitura freio
+	//resetar leitura de falhas do freio.
     freio_p1 = false;
+	valFreio = 0;
+	indexFreioTemp = 0;
 
     //reset envio imagens.
     indiceMenuOld = 0;
@@ -593,7 +597,7 @@ void sleepSetup() {
     detachInterrupt(digitalPinToInterrupt(11)); // stop LOW interrupt on D2
     noInterrupts();
     sleep_enable(); // enables the sleep bit in the mcucr register
-    attachInterrupt(digitalPinToInterrupt(11), wake, CHANGE); // use interrupt 0 (pin 2) and run function
+    attachInterrupt(digitalPinToInterrupt(11), wake, CHANGE); // use interrupt 0 (pin 2) and run function - pino usado pra acordar o micro-controlador
     interrupts();
     sleep_cpu();
     //resume
