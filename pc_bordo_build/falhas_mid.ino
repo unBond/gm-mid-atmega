@@ -27,7 +27,7 @@ void falhas_display() {
     backlightMenuF();
 //1 - Nivel liquido arrefecimento, sem agua o motor vai pro saco
     if (lvl_coolnt == true && contadorFalhas < 5) {
-        writeMenuF("4", "Nivel Liq. Arrefecim.", "Verificar!");
+        writeMenuF("4", "Nivel Liquido ", "Arrefecimen. Verificar");
         beepMid();
 		    one_beep = false; // aviso constante
         delay(3000);
@@ -49,7 +49,7 @@ void falhas_display() {
 
 //4 - Fusivel luz de freio, nao precisa explicar...
     if (brake_fuse == true && contadorFalhas < 20) {
-        writeMenuF("6", "Fusivel Luz Freio", "Verificar!");
+        writeMenuF("6", "Fusi. Luz Freio", "Verificar!");
         beepMid();
         delay(3000);
 
