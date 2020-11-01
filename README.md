@@ -1,5 +1,5 @@
 # gm-mid-atmega
-Alternative to gm/chevrolet/ multi display information - MID based on atmega 1284p / arduino editor/compiler o using standalone pcb
+Alternative to gm/chevrolet/ multi display information - MID based on atmega2560 (mini pro) with shield.
 Compatible cars:
 
 Gm astra with oem mid (brazil)
@@ -21,17 +21,13 @@ Another cars, maybe need some adaptations, or new calcs on fuel consumption fact
 
 
 ## pcb / boom / lista de peças
-https://easyeda.com/unBond/mid-atmega-1284p-3
+Em breve
 ![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/pcb_beta.jpg)
 
 Quase todos componentes você vai encontrar no esquemático no easy eda, fora isso você vai precisar 
 desses ítens:
 
-* 1 - ATMEGA 1284p
-* 2 - Stepdown 12 pra 5v, pois um 7805 não suporta alimentar o LCD. Vou deixar um exemplo
-![gm-mid-atmega](https://raw.githubusercontent.com/unBond/gm-mid-atmega/master/dd4012-65-40v-p-5v-step-down-dcdc-substituto-7805-D_NQ_NP_904249-MLB27779427662_072018-F.jpg)
-* 3 - Um gravador USBTiny USBtinyISP AVR ISP Programador Bootloader Para Arduino ou usar um arduino UNO mesmo pra gravar a firmware
-* 4 - Um display, no projeto foi usado o Nextion  NX4024T032_011R	3.2, porém como a saída dos dados é via serial ou i2c as possibilidades são infinitas! (outras telas, bluetooth e etc)
+* Um display, no projeto foi usado o Nextion  NX4024T032_011R	3.2, porém como a saída dos dados é via serial ou i2c as possibilidades são infinitas! (outras telas, bluetooth e etc)
 
 ## Principais créditos:
 
@@ -59,7 +55,7 @@ https://github.com/fire1/ArduinoMid/
 O restante é de minha autoria
 
 Não me responsabilizo por qualquer dano ou prejuízo que este venha causar.
-Use por sua conta e risco. Sempre consulte um engenheiro/projetista profissional.
+Use por sua conta e risco. Sempre consulte um engenheiro/projetista profissional. Sem garantia.
 
 ## Main credits:
 
